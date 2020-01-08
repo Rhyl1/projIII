@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8080-fd6c0089-b8b2-4214-8fa5-5b875cd5a831.ws-eu01.gitpod.io']
+ALLOWED_HOSTS = ['8080-b705e558-5edb-4082-8ee4-4e4fcae02b4b.ws-eu01.gitpod.io']
 
 
 # Application definition
@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ferment',
+    'accounts'
+
 ]
 
 MIDDLEWARE = [

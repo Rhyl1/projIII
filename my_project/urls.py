@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from ferment.views import get_ferment_list
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', get_ferment_list),
 ]
