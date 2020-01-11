@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 # from ferment.views import get_ferment_list
-from accounts.views import index, logout
+from accounts.views import index, logout, login
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^$', get_ferment_list),
     url(r'^$', index, name="index"),
     # url(r'^$', create_movie)
-    url(r'^accounts/logout/$', logout, name='logout')
+    url(r'^accounts/logout/$', logout, name='logout'),
+    url(r'^accounts/login/$', login, name='login')
 ]

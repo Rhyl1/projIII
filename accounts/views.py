@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse
-from django.contrib import auth
+from django.contrib import auth, messages
 
 # Create your views here.
 
@@ -13,4 +13,9 @@ def create_movie(request):
 def logout(request):
     """ log the user out """
     auth.logout(request)
+    messages.success(request, "You have succesfully been logged out")
     return redirect(reverse('index'))
+
+def login(request):
+    """Return a login page"""
+    return render(request, 'login.html')
