@@ -7,13 +7,10 @@
 
         <nav>
         <ul>
-            {% if user.is_authenticated%}
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                <li><a href="#">Profile</a></li>
-            {% else %}
             <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
             <li><a href="#">Register</a></li>
-            {% endif %}
+            <li><a href="#">Profile</a></li>
         </ul>
     </nav>
     <hr>
@@ -24,7 +21,10 @@
         {% endfor %}
     </div>
     {% endif %}
-    {% block content %}
-        {% endblock %}
     </body>
-</html>
+</html> 
+ 
+ 
+ {% block content %}
+        {% endblock %}
+
